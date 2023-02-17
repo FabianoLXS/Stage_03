@@ -6,46 +6,58 @@
 
 :root {
   font-size: 62.5%;
+  --ff-heading: "Staatliches", sans-serif;
+  --ff-paragraph: "Palanquin", sans-serif;
+  --bg-header: #8e9aaf;
+  --bg-title: #cbc0d3;
+  --fc-primary: #ffffff;
+  --fc-secondary: #23053a;
+  --ts-primary: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 body {
-  max-width: 384px;
   text-align: center;
 }
 
 header {
-  background-color: #8e9aaf;
+  background-color: var(--bg-header);
   bottom: 3.6rem;
+  padding-bottom: 2.9rem;
 }
 
 h1 {
-  font-family: "Staatliches";
+  font-family: var(--ff-heading);
   font-weight: normal;
   font-size: 4rem;
   line-height: 3.4rem;
-  color: #ffffff;
+  color: var(--fc-primary);
   padding: 0.8rem 8.6rem;
-  background-color: #cbc0d3;
+  background-color: var(--bg-title);
 
   letter-spacing: 0.05rem;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  text-shadow: var(--ts-primary);
 }
 
 p {
-  font-family: "Palanquin";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 1.5rem;
+  font-family: var(--ff-paragraph);
+  color: var(--fc-secondary);
+}
 
+main {
+  margin: 1.4rem auto 6rem;
   display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #23053a;
+  flex-direction: column;
+  gap: 6.3rem;
+  
 }
 
 #logo {
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
+}
+
+#images {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
 }
