@@ -6,13 +6,15 @@
 
 :root {
   font-size: 62.5%;
-  --ff-heading: "Staatliches", sans-serif;
+  --ff-heading: "Staatliches", cursive;
   --ff-paragraph: "Palanquin", sans-serif;
   --bg-header: #8e9aaf;
   --bg-title: #cbc0d3;
   --fc-primary: #ffffff;
   --fc-secondary: #23053a;
+  --fc-span: #4a4e69;
   --ts-primary: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  --bg-span: #feeafa;
 }
 
 body {
@@ -34,21 +36,21 @@ h1 {
   padding: 0.8rem 8.6rem;
   background-color: var(--bg-title);
 
-  letter-spacing: 0.05rem;
   text-shadow: var(--ts-primary);
 }
 
 p {
   font-family: var(--ff-paragraph);
   color: var(--fc-secondary);
+  font-size: 17px;
+  line-height: 30px;
 }
 
 main {
   margin: 1.4rem auto 6rem;
   display: flex;
   flex-direction: column;
-  gap: 6.3rem;
-  
+  gap: 3.6rem;
 }
 
 #logo {
@@ -56,8 +58,33 @@ main {
   padding-bottom: 3.2rem;
 }
 
-#images {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  position: relative;
+}
+
+.card span {
+  background-color: var(--bg-span);
+  color: var(--fc-span);
+  text-transform: uppercase;
+
+  width: 112px;
+  height: 35px;
+  border-radius: 20px;
+
+  /* font-weight: bold; */
+  font-family: var(--ff-heading);
+  font-size: 20px;
+  line-height: 34px;
+
+  position: absolute;
+  top: 1.7rem;
+  left: 79.2rem;
+}
+
+@media (min-width: 700px) {
 }
