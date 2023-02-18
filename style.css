@@ -65,7 +65,8 @@ main {
 .card img {
   transition: 200ms;
   animation-name: bottomup;
-  animation-duration: 2000ms;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
 .card img:hover {
@@ -90,22 +91,16 @@ main {
   left: 19.2rem;
 
   animation-name: topdown;
-  animation-duration: 5s;
+  animation-delay: 200ms;
+  animation-timing-function: ease;
+  animation-duration: 900ms;
+  animation-fill-mode: forwards;
 }
-
-/* @media (min-width: 700px) {
-  
-} */
 
 @keyframes topdown {
   0% {
     opacity: 0;
     transform: translateY(-20px);
-  }
-
-  50% {
-    opacity: 0.5;
-    transform: translateY(-10px);
   }
 
   100% {
@@ -115,12 +110,13 @@ main {
 }
 
 @keyframes bottomup {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
   100% {
     opacity: 1;
     transform: translateY(-15px);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
   }
 }
